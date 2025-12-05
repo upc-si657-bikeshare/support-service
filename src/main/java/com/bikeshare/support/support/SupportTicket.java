@@ -24,10 +24,12 @@ public class SupportTicket {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 24)
+    @Builder.Default
     private SupportStatus status = SupportStatus.OPEN;
 
     private String attachmentUrl;
 
     @Column(nullable = false)
+    @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
 }
